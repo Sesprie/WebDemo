@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/web/chapter01/account_cookie/cookie.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/chapter01/account_cookie/deal.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/chapter01/account_cookie/index.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/chapter01/account_cookie/quit.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/chapter01/account_cookie/success.jsp" charset="GBK" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

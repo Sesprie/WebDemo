@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <!--可以在servlet的类前面直接写上@WebServlet(name="PrintWriterServlet", urlPatterns = {"/PrintWriterServlet"})-->
+    <!--Servlet 3.0新特性-->
+
+
+    <!--<servlet>-->
+        <!--<servlet-name>OutPutStreamServlet</servlet-name>-->
+        <!--<servlet-class>servlet.response_request.OutPutStreamServletServlet</servlet-class>-->
+    <!--</servlet>-->
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>OutPutStreamServlet</servlet-name>-->
+        <!--<url-pattern>/OutPutStreamServlet</url-pattern>-->
+    <!--</servlet-mapping>-->
+
+    <!--<servlet>-->
+    <!--<servlet-name>PrintWriterServlet</servlet-name>-->
+    <!--<servlet-class>servlet.response_request.GetWriter_ervlet-class>-->
+    <!--</servlet>-->
+    <!--<servlet-mapping>-->
+    <!--<servlet-name>PrintWriterServlet</servlet-name>-->
+    <!--<url-pattern>/PrintWriterServlet</url-pattern>-->
+    <!--</servlet-mapping>-->
+</web-app>
