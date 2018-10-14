@@ -1,4 +1,4 @@
-package chapter01.session;
+package chapter05.session.user_login;
 
 import javax.imageio.ImageIO;
 import javax.servlet.ServletOutputStream;
@@ -6,12 +6,13 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
-@WebServlet(name = "CheckServlet", urlPatterns = {"/chapter01/session/CheckServlet"})
+@WebServlet(name = "CheckServlet", urlPatterns = {"/chapter05/session/user_login/CheckServlet"})
 public class CheckServlet extends HttpServlet {
     public static final int WIDTH = 60;
     public static final int HEIGHT = 20;
@@ -20,8 +21,10 @@ public class CheckServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         resp.setContentType("image/jpeg");
         ServletOutputStream sos = resp.getOutputStream();   //resp返回信息由两种方式，一种字节流resp.getOutputStream，一种字符串
-
+        HttpSession session = req.getSession();
         char[] rands = generateCheckCode();
+        System.out.println("验证码: " + new String(rands));
+        session.setAttribute("correct_code", new String(rands));
         BufferedImage image = new BufferedImage(WIDTH, HEIGHT, BufferedImage.TYPE_INT_RGB);
         Graphics g = image.getGraphics();
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
@@ -35,9 +38,8 @@ public class CheckServlet extends HttpServlet {
 
         ImageIO.write(image, "PNG", bos);//格式不要写错，否则无法显示图片
         byte[] buffer = bos.toByteArray();
-//        resp.setContentLength(buffer.length);
+        resp.setContentLength(buffer.length);
         sos.write(buffer);
-        sos.write("nihao".getBytes());
         sos.close();
         bos.close();
     }

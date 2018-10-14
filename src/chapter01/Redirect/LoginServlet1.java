@@ -7,8 +7,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name="LoginServlet", urlPatterns = {"/chapter01/servlet_no_quote/LoginServlet"})
-public class LoginServlet extends HttpServlet {
+@WebServlet(name="LoginServlet1", urlPatterns = {"/chapter01/servlet_no_quote/LoginServlet1"})
+public class LoginServlet1 extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html;charset=utf-8");
